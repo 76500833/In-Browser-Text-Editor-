@@ -16,7 +16,12 @@ module.exports = () => {
     },
     plugins: [
       new InjectManifest({
-        swSrc: './src/sw.js',
+        swSrc: './src-sw.js',
+        
+      }),
+      //added the key to success:
+      new HtmlWebpackPlugin({
+        template: './index.html',  // path to your source index.html file
       }),
       new WebpackPwaManifest({
         fingerprints: false,
@@ -29,7 +34,7 @@ module.exports = () => {
         start_url: '/',
         icons: [
           {
-            src: path.resolve('src/assets/images/icons/android-chrome-192x192.png'),
+            src: path.resolve('./src/images/logo.png'),
             sizes: [192, 512],
             destination: path.join('assets', 'icons'),
           },

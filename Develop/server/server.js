@@ -9,4 +9,7 @@ app.use(express.json());
 
 require('./routes/htmlRoutes')(app);
 
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
 app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
