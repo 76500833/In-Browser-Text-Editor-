@@ -17,7 +17,7 @@ module.exports = () => {
     plugins: [
       new InjectManifest({
         swSrc: './src-sw.js',
-        
+        swDest: 'src-sw.js',
       }),
       //added the key to success:
       new HtmlWebpackPlugin({
@@ -34,8 +34,8 @@ module.exports = () => {
         start_url: '/',
         icons: [
           {
-            src: path.resolve('./src/images/logo.png'),
-            sizes: [192, 512],
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
         ],
@@ -54,6 +54,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
         },

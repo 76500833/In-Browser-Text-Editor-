@@ -2,6 +2,13 @@ import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
+// main.js
+
+import { initdb } from './database.js';
+
+initdb()
+  .then(() => console.log('Database initialized'))
+  .catch((error) => console.error('Failed to initialize database:', error));
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
