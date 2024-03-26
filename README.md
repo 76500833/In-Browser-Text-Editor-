@@ -1,6 +1,5 @@
 # J.A.T.E.
 # Modern. Fast. Text Editor.
-![image](https://github.com/76500833/equityi/assets/145300587/6b65fccc-85f3-4f29-94c5-f856d6830985)
 - https://76500833.github.io/In-Browser-text-Editor-/ 
 
 ## Description
