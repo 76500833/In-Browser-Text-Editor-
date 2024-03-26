@@ -12,7 +12,6 @@
 - Javascript
 - Webpack
 - Workbox
-- 
 
 
 ### Developers:
